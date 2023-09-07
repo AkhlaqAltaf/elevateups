@@ -144,3 +144,11 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'jongleship@gmail.com'
 EMAIL_HOST_PASSWORD = 'hrkyxuftwwtcmhoq'
 EMAIL_USE_TLS = True
+
+
+
+
+
+STATIC_URL = 'static/'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
