@@ -1,2 +1,5 @@
-[services]
-app = { start = "gunicorn project1.wsgi:application --bind 0.0.0.0:$PORT" }
+[env]
+DJANGO_SETTINGS_MODULE = "project1.settings"
+
+[build]
+command = "gunicorn project1.wsgi:application --bind 0.0.0.0:$PORT"
