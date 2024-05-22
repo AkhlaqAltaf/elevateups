@@ -1,5 +1,4 @@
 from django.shortcuts import render,redirect
-from django.http import HttpResponse
 from django.contrib import messages
 
 # now for using login sys we import user model

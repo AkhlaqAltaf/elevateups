@@ -1,4 +1,4 @@
-"""project1 URL Configuration
+"""core URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 # from calculatorApp import 
-# from project1 import views
+# from core import views
 admin.site.site_header="Akhlaq Altaf is Admin"
 admin.site.site_title="WeCanDo Lab Admin Panel"
 admin.site.index_title="Welcome to WeCanDo Lab Admin Panel"
