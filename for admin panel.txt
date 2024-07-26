@@ -1,2 +1,0 @@
-usernam = akhlaq
-password = 1234

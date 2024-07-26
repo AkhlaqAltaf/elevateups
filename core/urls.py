@@ -20,12 +20,11 @@ from django.urls import path,include
 admin.site.site_header="Akhlaq Altaf is Admin"
 admin.site.site_title="WeCanDo Lab Admin Panel"
 admin.site.index_title="Welcome to WeCanDo Lab Admin Panel"
-from django.contrib.staticfiles.storage import staticfiles_storage
-from django.views.generic.base import RedirectView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico'))),
-    # path('', views.home, name='home'),
-    path('',include("home.urls")),# main Portfolio
-    
+    path('',include("src.apps.home.urls"),name='home'),
+    path('project/', include("src.apps.project.urls"), name='project'),
+
+
 ]

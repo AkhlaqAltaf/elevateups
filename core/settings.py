@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,14 +41,20 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'home',
-    'registration',
+    # 'home',
+    # 'registration',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     #APPS
     'src.apps.accounts.apps.AccountsConfig',
     'src.apps.project.apps.ProjectConfig',
     'src.apps.website.apps.WebsiteConfig',
+
+    # BUILT-IN SYSTEM APPS
+
+    'ckeditor',
+    'ckeditor_uploader',
+
 
 ]
 
@@ -127,11 +135,17 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-import os
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
                os.path.join(BASE_DIR,'static')
 ] 
+
+# MEDIA
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 
 
@@ -145,8 +159,8 @@ MESSAGE_TAGS = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'jongleship@gmail.com'
-EMAIL_HOST_PASSWORD = 'hrkyxuftwwtcmhoq'
+EMAIL_HOST_USER =  os.getenv("EMAIL")
+EMAIL_HOST_PASSWORD = os.getenv("PASSWORD")
 EMAIL_USE_TLS = True
 
 
@@ -156,3 +170,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = 'static/'
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+

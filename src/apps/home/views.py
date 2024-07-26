@@ -1,14 +1,12 @@
 from django.shortcuts import render
 from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
+from django.views.generic import TemplateView
 
-from twisted.mail.smtp import sendmail
-# Create your views here.
-from home.models import Contact
-def home(request):
-    # return HttpResponse('home')
-    # messages.success(request,'Welcome to my website nice to see you!!')
-    return render(request,'home/index.html')
+from src.apps.accounts.models import CustomUser
+from src.apps.website.models import Contact
+# def home(request):
+#     return render(request,'home/index.html')
 
 import string  
     
@@ -49,9 +47,21 @@ def contact(request):
         print('not post')
     return render(request,'home/contact.html')
 
-def portfolio(request):
-    # return HttpResponse('projects')
-    return render(request,'home/portfolio.html')
+
+class HomePageView(TemplateView):
+    template_name = 'home/portfolio.html'  # Simplified setting of template name
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        users = CustomUser.objects.filter(is_display_on_site=True)  # Use filter instead of get for multiple users
+        print("USERS", users)
+        context['users'] =users
+        return context
+
+
+# def portfolio(request):
+#     # return HttpResponse('projects')
+#     return render(request,'home/portfolio.html')
 def worksample(request):
     # return HttpResponse('projects')
     return render(request,'home/worksample.html')

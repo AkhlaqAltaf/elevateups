@@ -60,7 +60,7 @@ p{
   color: red;
 }
   </style>
-     
+
   </head>
 
   <body>
@@ -75,7 +75,7 @@ p{
       <div class="container">
         <div id="logo" class="pull-left">
           <!-- Uncomment below if you prefer to use a text logo -->
-          <h1><a href="/">Akhlaq<span>Altaf</span></a></h1>
+          <h1><a href="/">Elevate<span>-UP</span></a></h1>
         </div>
 
         <nav id="nav-menu-container">
@@ -108,10 +108,10 @@ p{
     Intro Section
   ============================ -->
 
-    <section id="intro" style="background: url('static/img/bg/home.jpg') top center;width: 100%;height: 100vh;  
+    <section id="intro" style="background: url('static/img/bg/home.jpg') top center;width: 100%;height: 100vh;
   background-size: cover; overflow: hidden; position: relative;z-index:10">
       <div class="intro-container wow fadeIn">
-        <h1 class="mb-4 pb-0">Welcome to<br /><span>WeCanDO Lab</span></h1>
+        <h1 class="mb-4 pb-0">Welcome to<br /><span>Elevate</span></h1>
 
         <a href="#aboutsection" class="about-btn scrollto">About US</a>
       </div>
@@ -129,30 +129,35 @@ p{
 
                     <div class="container">
                       <div class="row">
-                        
+                          {%for user in users%}
+
                         <div class="col-md-6 col-lg-6 mb-4">
 
                           <div class="text-center" style="padding: 2.5rem!important;">
 
                             <div class="avatar p-1">
                               <div class="image-frame">
-                                <img class="thumbnail-img shadow-4-strong" src="{% static 'img/my img.jpg' %}" width="160px" height="160px" />
+                                <img class="thumbnail-img shadow-4-strong" src="{{user.profile_pic.url}}"  width="160px" height="160px" />
                               </div>
-                              
+
                             </div>
+
+
                             <div class="header-bio mt-3">
                               <div data-aos="zoom-in" data-aos-delay="0">
-                                <h2 class="h1">Akhlaq Altaf</h2>
-                                <p  id="title"> Backend Web Developer & AI Integration Specialist</p>
+                                <h2 class="h1">{{user.username}}</h2>
+
+
+                                <p  id="title">{{user.status_description}}</p>
 
 
                               </div>
 
-                              <button id="showDetailsAkhlaq" class="btn bg-primary">About Me</button>
+<!--                              <button id="showDetailsAkhlaq" class="btn bg-primary">About Me</button>-->
 
 <!-- Container for the details -->
                              <div id="detailsContainerAkhlaq" style="display: none;">
-                              
+
                                 <h3 class ='heading'>
                                   About Me:
                                 </h3>
@@ -161,7 +166,7 @@ p{
                                 </p>
                                 <h3 class ='heading'>
                                   Expertise:
-                                  
+
                                 </h3>
                                 <h4 class ="subh">
                                   Backend Development:
@@ -178,9 +183,9 @@ p{
                               </p>
 
                                 <h4 class ="subh">
-                                  API Integration: 
+                                  API Integration:
                                 </h4>
-                                
+
                                 <p class="p">
                                   I seamlessly connect our web applications with external services and APIs to enhance functionality and data exchange.
                                 </P>
@@ -196,7 +201,7 @@ p{
                                 <p class="p">
                                   I thrive on solving complex technical challenges and finding elegant solutions that push the boundaries of what our web applications can achieve.
                                 </P>
-                               
+
                                 <h3 class ='heading'>
                                   Team Leadership:
                                 </h3 >
@@ -204,8 +209,7 @@ p{
                                   As the team leader, I guide our sub-team of talented individuals to work collaboratively, ensuring that we deliver exceptional web projects on time and within budget.
                                 </p>
 
-                                
-                              
+
                               </div>
 
                               <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
@@ -214,11 +218,11 @@ p{
                                     <li class="nav-item">
                                       <a class="nav-link" href="https://github.com/AkhlaqAltaf" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
                                     </li>
-                                   
-                                    
-                                    
 
-                                    
+
+
+
+
                                   </ul>
                                 </nav>
                               </div>
@@ -229,111 +233,11 @@ p{
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 mb-4">
-                           <div class="text-center" style="padding: 2.5rem!important;">
-                             <div class="avatar p-1">
-                              <div class="image-frame">
-                                <img class="img shadow-4-strong" src="{% static 'img/rimsha.jpg' %}" width="160px" height="160px" />
-                              </div>                              
-                             </div>
-                             <div class="header-bio mt-3">
-                               <div data-aos="zoom-in" data-aos-delay="0">
-                                 <h2 class="h1">Rimsha Muneer </h2>
-                                
 
-                                 <p class="p">Frontend Web Developer, Designer & Quality Assurance Engineer</p>
-
-
-                               
-                              
-                                 <button id="showDetailsRimsha" class="btn bg-primary">About Me</button>
-
-                                 <!-- Container for the details -->
-                                 <div id="detailsContainerRimsha" style="display: none;">
-                              
-                                <h3 class ='heading'>
-                                  About Me:
-                                </h3>
-                                <p class="p">
-                                  I'm Rimsha, a skilled frontend web developer with a passion for design and a commitment to ensuring the highest quality in our web applications. With an eye for detail and a flair for creativity, I play a crucial role in bringing our projects to life through stunning visual experiences and rigorous testing.
-                                </p>
-                                <h3 class ='heading'>
-                                  Expertise:
-                                  
-                                </h3>
-                                <h4 class ="subh">
-                                  Frontend Development: 
-                                </h4>
-                                <p class="p">
-                                  I specialize in crafting beautiful and responsive user interfaces using HTML, CSS, and JavaScript. I ensure that our applications not only function flawlessly but also look visually appealing.
-                                </p>
-
-                                <h4 class ="subh">
-                                  Design:
-                                </h4>
-                              <p class="p">
-                                With a keen sense of aesthetics, I transform concepts into captivating designs. From wireframes to full-fledged web layouts, I create designs that leave a lasting impression.
-
-                                <h4 class ="subh">
-                                  Testing: 
-                                </h4>
-                                
-                                <p class="p">
-                                  Quality is at the forefront of my responsibilities. I rigorously test our applications to identify and resolve any issues, ensuring that our users enjoy a seamless experience.
-                                <h4 class ="subh">
-                                  User Experience:
-                                </h4>
-                                <p class="p">
-                                  I focus on creating user-centric designs and interfaces that enhance the overall user experience, making our applications intuitive and enjoyable to use.
-
-
-                                </P>
-                                <h4 class ="subh">
-                                  Collaboration:
-                                </h4>
-                                <p class="p">
-                                  I collaborate closely with our development and design teams to bridge the gap between concept and implementation, ensuring that our projects align with our vision.
-                                </P>
-                               
-                                <h3 class ='heading'>
-                                  Team Contributions:
-                                </h3 >
-                                <p class="p">
-                                  My diverse skill set allows me to contribute not only to frontend development but also to the overall quality and aesthetics of our web applications. I take pride in ensuring that every aspect of our projects meets the highest standards.
-                                </p>
-
-                                
-                              
-                              </div>
-
-
-
-
-                               </div>
-
-
-                               <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
-                                 <nav role="navigation">
-                                   <ul class="nav justify-content-center">
-                                     <li class="nav-item">
-                                       <a class="nav-link" href="https://github.com/AkhlaqAltaf" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
-                                     </li>
-                                     
-                                   </ul>
-                                 </nav>
-                               </div>
-                               <div class="d-print-none">
-                                 <a class="fancyButton btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="https://drive.google.com/file/d/1su2rk2W4vFtQeawU66zPqZE_yVdMSvAk/view?usp=sharing" data-aos="fade-right" data-aos-delay="700">Download CV</a>
-                                 <a class="fancyButton btn btn-default rex-primary-btn-effect-No btn btn-info btn-lg shadow-sm mt-1" href="/contact" data-aos="fade-left" data-aos-delay="700">Contact Me</a>
-                               </div>
-                             </div>
-                           </div>
-                         </div>
-                      </div>
-
+                           {%endfor%}
                     </div>
 
-                    
+
 
 
                   </div>
@@ -343,9 +247,9 @@ p{
 
             <div class="shadow-2-strong p-5 text-white bg-matte" id="about">
               <div class="about-section">
-               
-               
-               
+
+
+
                 <div class="row">
                   <div class="col-md-6 mx-auto">
                     <h2 class="h2 fw-dark text-center">About Us</h2>
@@ -536,15 +440,15 @@ p{
                         Supervisor & Mentor <br /><span class="text-white h6">WeCanDo Winter of Contributing '21</span>
                       </div>
                     </div>
-                 
+
                   </div>
                   <div class="timeline-card-info" data-aos="fade-in" data-aos-delay="200">
                     <div class="timeline-head px-4 pt-3 d-flex">
                       <img class="org-logo" src="{% static 'img/experience/gssoc.png' %}" alt="" height="40px" width="40px" />
-                     
+
                     </div>
-                    
-                    
+
+
                   </div>
 
                   <div class="timeline-card-info" data-aos="fade-in" data-aos-delay="200">
@@ -558,7 +462,7 @@ p{
                       <div class="text-white text-small mb-3">Aug 2021 - oct 2021</div>
                       <div>
                         <ul>
-                       
+
                           <li>Developed whole Front End for the Official website</li>
                         </ul>
                       </div>
@@ -603,9 +507,9 @@ p{
                     </div>
                   </div>
                 </div>
-                    
+
                   </div>
-                
+
                 </div>
               </div>
             </div>
@@ -615,7 +519,7 @@ p{
     </section>
 
 
-    
+
     {% static 'img/skills' as baseurl %}
     {% static 'img/experience' as baseurl2 %}
 
@@ -642,7 +546,7 @@ p{
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!-- 
+    <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
      -->
@@ -651,7 +555,7 @@ p{
       // Get references to the button and details container
       const showDetailsButtonAkhlaq = document.getElementById('showDetailsAkhlaq');
       const detailsContainerAkhlaq = document.getElementById('detailsContainerAkhlaq');
-    
+
       // Add a click event listener to the button
       showDetailsButtonAkhlaq.addEventListener('click', () => {
         // Toggle the visibility of the details container
@@ -663,14 +567,14 @@ p{
         }
       });
 
-     
+
     </script>
 
     <script>
 
 const showDetailsButtonRimsha = document.getElementById('showDetailsRimsha');
       const detailsContainerRimsha= document.getElementById('detailsContainerRimsha');
-    
+
       // Add a click event listener to the button
       showDetailsButtonRimsha.addEventListener('click', () => {
         // Toggle the visibility of the details container
