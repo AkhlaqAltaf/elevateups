@@ -23,8 +23,8 @@ admin.site.index_title="Welcome to WeCanDo Lab Admin Panel"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include("src.apps.home.urls"),name='home'),
-    path('project/', include("src.apps.project.urls"), name='project'),
+    path('',include("src.apps.website.urls"),name='website'),
+    # path('project/', include("src.apps.project.urls"), name='project'),
 
 
 ]

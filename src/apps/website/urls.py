@@ -1,17 +1,11 @@
 from django.contrib import admin
 from django.urls import path
-from src.apps.website import views
 
-admin.site.site_header = "Akhlaq Altaf"
-admin.site.site_title = " developed by Akhlaq Altaf"
-admin.site.index_title = "Portfolio"
-
+from src.apps.website.views import WebsiteView
 
 app_name = "website"
 
 urlpatterns = [
-    path('', views.portfolio, name='portfolio'),
-    path('contact/', views.contact, name='contact'),
-    path('worksample', views.worksample, name='worksample'),
-    path('djangoProjects', views.djangoProjects, name='djangoProjects'),
+    path('', WebsiteView.as_view(), name='portfolio'),
+
 ]
