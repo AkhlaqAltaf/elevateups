@@ -15,16 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-# from calculatorApp import 
-# from core import views
-admin.site.site_header="Akhlaq Altaf is Admin"
-admin.site.site_title="WeCanDo Lab Admin Panel"
-admin.site.index_title="Welcome to WeCanDo Lab Admin Panel"
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("src.apps.website.urls"),name='website'),
-    # path('project/', include("src.apps.project.urls"), name='project'),
 
 
 ]

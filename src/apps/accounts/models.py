@@ -1,7 +1,6 @@
-from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-class CustomUser(AbstractUser):
+class CustomUser(models.Model):
     STATUS_CHOICES = [
         ('admin', 'Admin'),
         ('client', 'Client'),
@@ -16,16 +15,13 @@ class CustomUser(AbstractUser):
         ('team_leader', 'Team Leader')
     ]
 
-
-    is_display_on_site = models.BooleanField(default=False,blank=True,null=True)
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='client')
+    full_name = models.CharField(max_length=100)
+    email = models.EmailField(blank=True,null=True)
+    phone = models.CharField(max_length=100 , blank=True, null=True)
+    experience_detail  = models.TextField(blank=True,null=True)
+    links = models.TextField(blank=True, null=True)
     member_status = models.CharField(max_length=20, choices=MEMBER_STATUS_CHOICES, blank=True, null=True)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='client')
     status_description = models.TextField(blank=False,null=True)
-
-    groups = models.ManyToManyField('auth.Group', related_name='custom_user_groups')
-    user_permissions = models.ManyToManyField('auth.Permission', related_name='custom_user_permissions')
-    profile_pic = models.ImageField(blank=True,null=True,upload_to='project_media/')
-    class Meta:
-
-        permissions = [('can_view_customuser', 'Can view custom user')]
-        unique_together = ('email',)
+    profile_picture = models.ImageField(blank=True,null=True,upload_to='user/')
+    is_display_on_site = models.BooleanField(default=False,blank=True,null=True)
