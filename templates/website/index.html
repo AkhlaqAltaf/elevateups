@@ -1,18 +1,10 @@
-
 {% load static %}
-
-
-
 
 <html lang="en">
 
 {% include 'website/head.html' %}
 
-
-
-
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
   <div id="overlayer"></div>
   <div class="loader">
@@ -20,7 +12,6 @@
       <span class="sr-only">Loading...</span>
     </div>
   </div>
-
 
   <div class="site-wrap">
 
@@ -32,152 +23,80 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-   
-    
-    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+    {% include 'website/navbar.html' %}
 
-      <div class="container">
-        <div class="row align-items-center">
-          
-          <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">Nitro<span class="text-primary">.</span> </a></h1>
-          </div>
-
-          <div class="col-12 col-md-10 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li class="has-children">
-                  <a href="#about-section" class="nav-link">About Us</a>
-                  <ul class="dropdown">
-                    <li><a href="#team-section" class="nav-link">Team</a></li>
-                    <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
-                    <li><a href="#faq-section" class="nav-link">FAQ</a></li>
-                    <li class="has-children">
-                      <a href="#">More Links</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                
-                <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
-                <li><a href="#services-section" class="nav-link">Services</a></li>
-                <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-
-
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
-        </div>
-      </div>
-      
-    </header>
-
-  
-     
+    <!-- Hero Section -->
     <div class="site-blocks-cover overlay" style="background-image: url({% static "images/hero_2.jpg" %});" data-aos="fade" id="home-section">
-
       <div class="container">
         <div class="row align-items-center justify-content-center">
-
-          
           <div class="col-md-8 mt-lg-5 text-center">
-            <h1 class="text-uppercase" data-aos="fade-up">Welcome</h1>
-            <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio soluta eius error.</p>
+            <h1 class="text-uppercase" data-aos="fade-up">Welcome to Escalators</h1>
+            <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
+              Pioneering AI Solutions for Tomorrow's Challenges. Empowering businesses through cutting-edge artificial intelligence.
+            </p>
             <div data-aos="fade-up" data-aos-delay="100">
               <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Get In Touch</a>
             </div>
           </div>
-            
         </div>
       </div>
-
       <a href="#about-section" class="mouse smoothscroll">
         <span class="mouse-icon">
           <span class="mouse-wheel"></span>
         </span>
       </a>
-    </div>  
+    </div>
 
-
+    <!-- About Us Section -->
     <div class="site-section cta-big-image" id="about-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center" data-aos="fade">
-            <h2 class="section-title mb-3">About Us</h2>
+            <h2 class="section-title mb-3">About Escalators</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+          <div class="col-lg-6 mb-5" data-aos="fade-up">
             <figure class="circle-bg">
-            <img src="{% static "images/hero_1.jpg" %}" alt="Image" class="img-fluid">
+              <img src="{% static 'images/hero_1.jpg' %}" alt="About Us Image" class="img-fluid">
             </figure>
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3 class="h3 mb-4 text-black">For the next great business</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo tempora cumque eligendi in nostrum labore omnis quaerat.</p>
-
+              <h3 class="h3 mb-4 text-black">Shaping the Future of AI</h3>
+              <p>
+                At Escalators, we harness the power of artificial intelligence to drive business growth and innovation. Our solutions are designed to meet the unique needs of modern businesses, from predictive analytics to intelligent automation.
+              </p>
             </div>
-
-
 
             <div class="mb-4">
               <ul class="list-unstyled ul-check success">
-                <li>Officia quaerat eaque neque</li>
-                <li>Possimus aut consequuntur incidunt</li>
-                <li>Lorem ipsum dolor sit amet</li>
-                <li>Consectetur adipisicing elit</li>
+                <li>Customized AI solutions for every business</li>
+                <li>Expertise in machine learning and automation</li>
+                <li>Data-driven innovation</li>
+                <li>Comprehensive support and consultation</li>
               </ul>
-
             </div>
-
-
-
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Additional Sections (replace with your content) -->
+    {% include 'website/site_section.html' %}
+    {% include 'website/team.html' %}
+    {% include 'website/portfolio.html' %}
+    {% include 'website/service.html' %}
+    {% include 'website/testimonials.html' %}
+    {% include 'website/pricing.html' %}
+    {% include 'website/about.html' %}
+    {% include 'website/blog.html' %}
+    {% include 'website/contact_us.html' %}
+    {% include 'website/footer.html' %}
 
-<!--SITE SECTION -->
-  {% include 'website/site_section.html' %}
-
-<!--TEAM SECTION -->
-
-  {% include 'website/team.html' %}
-<!--  PORTFOLIO SECTION -->
-
-  {% include 'website/portfolio.html'%}
-<!--SERVICE SECTION -->
-  {%include 'website/service.html'%}
-<!--  TESTIMONIALS-->
-  {% include 'website/testimonials.html'%}
-<!--PRICING SECTION-->
-  {%include 'website/pricing.html'%}
-<!--  ABOUT US SECTION -->
-  {%include 'website/about.html'%}
-<!--BLOG SECTION -->
-  {% include 'website/blog.html' %}
-<!--  CONTACT US SECTION -->
-   {% include 'website/contact_us.html' %}
-<!--  FOOTER SECTION  -->
-  {% include 'website/footer.html' %}
   </div> <!-- .site-wrap -->
 
-
-
-{% include "website/scripts.html" %}
-
-    
+  {% include 'website/scripts.html' %}
+  
 </body>
 </html>

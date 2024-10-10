@@ -1,43 +1,56 @@
-
-{%load static%}
- <section class="site-section" id="about-section">
-      <div class="container">
-        <div class="row mb-5">
-          
-          <div class="col-lg-5 ml-auto mb-5 order-1 order-lg-2" data-aos="fade" data-aos="fade-up" data-aos-delay="">
-            <img src="{% static "images/about_1.jpg" %}" alt="Image" class="img-fluid rounded">
-          </div>
-          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade">
-
-            <div class="row">
-
-              
-              
-              <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="">
-                <div class="unit-4">
-                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-head"></span></div>
-                  <div>
-                    <h3>Web &amp; Mobile Specialties</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis consect.</p>
-                    <p class="mb-0"><a href="#">Learn More</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4">
-                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-smartphone"></span></div>
-                  <div>
-                    <h3>Intuitive Thinkers</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis.</p>
-                    <p class="mb-0"><a href="#">Learn More</a></p>
-                  </div>
-                </div>
+{% load static %}
+<section class="site-section" id="about-section">
+  <div class="container">
+    <div class="row mb-5">
+      <!-- Content section on the left -->
+      <div class="col-lg-6" data-aos="fade">
+        <div class="row">
+          <!-- AI in Healthcare -->
+          <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up">
+            <div class="unit-4">
+              <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-heart"></span></div>
+              <div>
+                <h3>AI in Healthcare</h3>
+                <p>We aim to revolutionize healthcare by leveraging AI for better diagnostics, personalized treatments, and medical research, ensuring better patient care.</p>
               </div>
             </div>
           </div>
-          
+          <!-- AI in Agriculture -->
+          <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="unit-4">
+              <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-plant"></span></div>
+              <div>
+                <h3>AI in Agriculture</h3>
+                <p>Our AI solutions will help farmers optimize crop yields, monitor soil health, and predict weather patterns, making agriculture more efficient and sustainable.</p>
+              </div>
+            </div>
+          </div>
+          <!-- AI in Education -->
+          <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="unit-4">
+              <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-book"></span></div>
+              <div>
+                <h3>AI in Education</h3>
+                <p>We are committed to enhancing the educational experience by creating AI-driven personalized learning paths, virtual tutors, and smart content generation tools.</p>
+              </div>
+            </div>
+          </div>
+          <!-- AI in Entertainment -->
+          <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="unit-4">
+              <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-music"></span></div>
+              <div>
+                <h3>AI in Entertainment</h3>
+                <p>We plan to innovate the entertainment industry by integrating AI into content creation, enhancing user experiences, and driving interactive storytelling.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  
-    
+      <!-- Image section on the right -->
+      <div class="col-lg-5 ml-auto mb-5 order-1 order-lg-2" data-aos="fade" data-aos-delay="">
+        <img src="{% static 'images/about.jpg' %}" alt="Image" class="img-fluid rounded" style="height:450px;width:400px">
+      </div>
+    </div>
+  </div>
+</section>

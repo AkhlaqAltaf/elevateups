@@ -1,3 +1,4 @@
+from ckeditor.fields import RichTextField
 from django.db import models
 
 class WebsiteInfo(models.Model):
@@ -18,3 +19,11 @@ class Contact(models.Model):
 
     def __str__(self):
         return (self.name)
+
+
+# class OurServices(models.Model):
+#     picture = models.ImageField(upload_to='services/')
+#     titile  = models.CharField(max_length=300)
+#     define = models.TextField()
+#     content = RichTextField(null=True,blank=True)
+#

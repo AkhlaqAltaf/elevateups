@@ -1,77 +1,108 @@
-
-{%load static%}
-    <section class="site-section border-bottom bg-light" id="services-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center" data-aos="fade">
-            <h2 class="section-title mb-3">Our Services</h2>
-          </div>
-        </div>
-        <div class="row align-items-stretch">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-startup"></span></div>
-              <div>
-                <h3>Business Consulting</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
+{% load static %}
+<section class="site-section border-bottom bg-light" id="services-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center" data-aos="fade">
+        <h2 class="section-title mb-3">Innovative AI & Tech Solutions for Business Growth</h2>
+      </div>
+    </div>
+    <div class="row align-items-stretch">
+      <!-- AI Development Services -->
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+        <div class="unit-4">
+          <div class="unit-4-icon mr-4"><span class="text-primary flaticon-settings"></span></div>
+          <div>
+            <h3>AI Development Services</h3>
+            <p>Our team builds cutting-edge AI systems, from machine learning algorithms to natural language processing, driving growth and innovation for your business.</p>
+            <p><a href="#" class="learn-more" data-service="ai-dev">Learn More</a></p>
+            <div class="expanded-text" id="ai-dev" style="display:none;">
+              We provide state-of-the-art AI development services, utilizing machine learning, deep learning, and natural language processing to enhance business processes, improve decision-making, and drive innovation.
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-graphic-design"></span></div>
-              <div>
-                <h3>Market Analysis</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-settings"></span></div>
-              <div>
-                <h3>User Monitoring</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
-            <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-idea"></span></div>
-              <div>
-                <h3>Insurance Consulting</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-smartphone"></span></div>
-              <div>
-                <h3>Financial Investment</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="unit-4">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-head"></span></div>
-              <div>
-                <h3>Financial Management</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
-    </section>
+      <!-- Mobile App Development -->
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="unit-4">
+          <div class="unit-4-icon mr-4"><span class="text-primary flaticon-smartphone"></span></div>
+          <div>
+            <h3>Mobile App Development</h3>
+            <p>We deliver custom mobile app solutions tailored to your needs, ensuring a seamless user experience across platforms.</p>
+            <p><a href="#" class="learn-more" data-service="mobile-app">Learn More</a></p>
+            <div class="expanded-text" id="mobile-app" style="display:none;">
+              Our mobile development team builds intuitive, feature-rich mobile applications for both iOS and Android, ensuring user-friendly interfaces and seamless experiences across devices.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SaaS-Based Systems -->
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="unit-4">
+          <div class="unit-4-icon mr-4"><span class="text-primary flaticon-cloud"></span></div>
+          <div>
+            <h3>SaaS-Based Systems</h3>
+            <p>We create scalable, secure SaaS platforms that help streamline business operations, improving productivity and revenue growth.</p>
+            <p><a href="#" class="learn-more" data-service="saas-systems">Learn More</a></p>
+            <div class="expanded-text" id="saas-systems" style="display:none;">
+              We build scalable SaaS applications that enable businesses to access powerful tools online, reducing operational costs and driving efficiency.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Additional Services -->
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+        <div class="unit-4">
+          <div class="unit-4-icon mr-4"><span class="text-primary flaticon-desktop"></span></div>
+          <div>
+            <h3>Custom Web & Desktop Development</h3>
+            <p>From custom web applications to enterprise desktop solutions, we build robust platforms to elevate your business's digital presence.</p>
+            <p><a href="#" class="learn-more" data-service="custom-dev">Learn More</a></p>
+            <div class="expanded-text" id="custom-dev" style="display:none;">
+              We design and develop custom web and desktop applications tailored to your unique business needs, providing performance-driven solutions.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="unit-4">
+          <div class="unit-4-icon mr-4"><span class="text-primary flaticon-chart"></span></div>
+          <div>
+            <h3>Predictive Modelling</h3>
+            <p>We harness the power of data to create predictive models, enabling businesses to make informed decisions and stay ahead in the market.</p>
+            <p><a href="#" class="learn-more" data-service="predictive-modeling">Learn More</a></p>
+            <div class="expanded-text" id="predictive-modeling" style="display:none;">
+              Using data analytics and machine learning, we develop predictive models that help businesses anticipate trends and make data-driven decisions.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="unit-4">
+          <div class="unit-4-icon mr-4"><span class="text-primary flaticon-network"></span></div>
+          <div>
+            <h3>ChatGPT Integrations</h3>
+            <p>We bring ChatGPT's powerful language model capabilities into your applications, enhancing customer interaction and automation.</p>
+            <p><a href="#" class="learn-more" data-service="chatgpt-integrations">Learn More</a></p>
+            <div class="expanded-text" id="chatgpt-integrations" style="display:none;">
+              We integrate OpenAI's ChatGPT into your platforms, automating responses and enabling conversational AI to enhance user experience.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const learnMoreLinks = document.querySelectorAll(".learn-more");
+    learnMoreLinks.forEach(link => {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        const serviceId = this.getAttribute("data-service");
+        const expandedText = document.getElementById(serviceId);
+        expandedText.style.display = expandedText.style.display === "none" ? "block" : "none";
+      });
+    });
+  });
+</script>
