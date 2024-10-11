@@ -2,6 +2,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import path
+from django.views.generic import TemplateView
 
 from core import settings
 from src.apps.website.views import WebsiteView, BlogDetailView, MoreBlogsView, SiteMap
@@ -12,8 +13,8 @@ urlpatterns = [
     path('', WebsiteView.as_view(), name='portfolio'),
     path('blog/<int:id>/', BlogDetailView.as_view(), name='blog_detail'),
     path('more-blogs/', MoreBlogsView.as_view(), name='more_blogs'),
-    path('sitemap.xml', sitemap, {'sitemaps': {'sitemap': SiteMap}},
-         name='django.contrib.sitemaps.views.sitemap'),
+    path('sitemap.xml', TemplateView.as_view(template_name='sitemap.xml', content_type='application/xml')),
+
 
 ]
 if settings.DEBUG:

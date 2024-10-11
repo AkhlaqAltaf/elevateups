@@ -36,6 +36,7 @@ class MoreBlogsView(ListView):
 
 class SiteMap(Sitemap):
     changefreq = "weekly"
+
     priority = 0.5
 
     def items(self):
