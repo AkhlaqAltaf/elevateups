@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    # 'home',
-    # 'registration',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     #APPS
@@ -162,7 +160,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER =  os.getenv("EMAIL")
 EMAIL_HOST_PASSWORD = os.getenv("PASSWORD")
 EMAIL_USE_TLS = True
-
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

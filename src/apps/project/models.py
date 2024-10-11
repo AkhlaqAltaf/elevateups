@@ -23,7 +23,7 @@ class Project(models.Model):
     technologies_involved = models.ManyToManyField(ProjectTechnology, related_name='projects')
     short_description = models.TextField(null=True,blank=True)
     full_description = RichTextField(null=True,blank=True)
-    team_members = models.ManyToManyField(CustomUser, related_name='projects_involved',null=True,blank=True)
+    team_members = models.ManyToManyField(CustomUser,related_name='projects')
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 

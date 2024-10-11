@@ -1,0 +1,88 @@
+{% load static %}
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-5">
+            <h2 class="footer-heading mb-4">About Us</h2>
+            <p>At Escalators, we are dedicated to leveraging AI technology to drive innovation in various fields, including healthcare, agriculture, education, and entertainment. Our mission is to empower businesses and individuals through intelligent solutions.</p>
+          </div>
+          <div class="col-md-3 ml-auto">
+            <h2 class="footer-heading mb-4">Quick Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="/" class="smoothscroll" data-target="#about-section">About Us</a></li>
+              <li><a href="/" class="smoothscroll" data-target="#services-section">Services</a></li>
+              <li><a href="/" class="smoothscroll" data-target="#testimonials-section">Testimonials</a></li>
+              <li><a href="/" class="smoothscroll" data-target="#contact-section">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Follow Us</h2>
+            <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h2 class="footer-heading mb-4">Subscribe to Our Newsletter</h2>
+        <form action="#" method="post" class="footer-subscribe">
+          <div class="input-group mb-3">
+            <input type="email" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2" required>
+            <div class="input-group-append">
+              <button class="btn btn-primary text-black" type="submit" id="button-addon2">Send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row pt-5 mt-5 text-center">
+      <div class="col-md-12">
+        <div class="border-top pt-5">
+          <p>
+            &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <strong>Escalators</strong>. We are committed to advancing AI technology for a better tomorrow.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Smooth scroll to sections when clicking footer links
+      const footerLinks = document.querySelectorAll('.list-unstyled a'); // Select all anchor tags within the footer links
+
+      footerLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent default anchor click behavior
+          const targetId = this.getAttribute('data-target'); // Use data-target attribute
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            // Change the URL to the main URL with the hash
+            window.history.pushState(null, null, '/#' + targetId.substring(1));
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+              inline: 'nearest'
+            });
+          }
+        });
+      });
+
+      // Check if there's a hash in the URL on load
+      if (window.location.hash) {
+        const targetElement = document.querySelector(window.location.hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
+        }
+      }
+    });
+  </script>
+</footer>

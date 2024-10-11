@@ -1,0 +1,76 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static "css/team.css"  %}">
+
+<section class="site-section border-bottom" id="team-section">
+  <div class="container">
+    <div class="row mb-5 justify-content-center">
+      <div class="col-md-8 text-center">
+        <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Our Team</h2>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">Meet our talented team of professionals.</p>
+      </div>
+    </div>
+
+    <div class="row team-container">
+      {% for member in team %}
+        <div class="col-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:100 }}">
+          <div class="team-member">
+            <figure>
+              <ul class="social">
+                {% if member.facebook_link %}
+                  <li><a href="{{ member.facebook_link }}"><span class="icon-facebook"></span></a></li>
+                {% endif %}
+                {% if member.twitter_link %}
+                  <li><a href="{{ member.twitter_link }}"><span class="icon-twitter"></span></a></li>
+                {% endif %}
+                {% if member.linkedin_link %}
+                  <li><a href="{{ member.linkedin_link }}"><span class="icon-linkedin"></span></a></li>
+                {% endif %}
+                {% if member.instagram_link %}
+                  <li><a href="{{ member.instagram_link }}"><span class="icon-instagram"></span></a></li>
+                {% endif %}
+              </ul>
+              <img src="{{ member.profile_picture.url }}" alt="{{ member.full_name }}" class="img-fluid team-img">
+            </figure>
+            <div class="p-3 text-center">
+              <h3>{{ member.full_name }}</h3>
+              <span class="position">{{ member.member_status }}</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+  <script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 3, // Show 3 members at a time
+    spaceBetween: 30, // Spacing between slides
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      // Adjust slider for different screen sizes
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script>
+
+

@@ -1,20 +1,26 @@
+from ckeditor.fields import RichTextField
 from django.db import models
 
-class WebsiteInfo(models.Model):
-    company_name = models.CharField(max_length=100)
-    logo = models.ImageField(upload_to='company_logo/')
-    tagline = models.CharField(max_length=255)
-    services_provided = models.TextField()
-    total_clients_dealt = models.PositiveIntegerField(default=0)
-    total_team_members = models.PositiveIntegerField(default=0)
+
+class OurServices(models.Model):
+    picture = models.ImageField(upload_to='services/')
+    title  = models.CharField(max_length=300)
+    define = models.TextField()
+    content = RichTextField(null=True,blank=True)
 
 
-class Contact(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=40)
-    email = models.EmailField(max_length=40)
-    content = models.TextField(max_length=400)
-    number = models.CharField(max_length=10)
 
-    def __str__(self):
-        return (self.name)
+class Blogs(models.Model):
+    primary_picture =  models.ImageField(upload_to='blogs/')
+    author_name = models.CharField(max_length=100 )
+    author_picture = models.ImageField(upload_to='blogs/',blank=True , null=True)
+    author_description = models.TextField(blank=True,null=True,max_length=500 )
+    title = models.CharField(max_length=200)
+    category = models.CharField(max_length=200)
+    description = models.TextField(blank=True,null=True)
+    content = RichTextField()
+    created_on = models.DateTimeField(auto_created=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    is_verified = models.BooleanField(default=False)
+    is_display_on_first_page = models.BooleanField(default=False)
+

@@ -1,0 +1,74 @@
+{% load static %}
+
+<header class="site-navbar py-1 js-sticky-header site-navbar-target" role="banner">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-6 col-xl-2">
+        <a href="/"><img src="{% static 'images/brand/E1.png' %}" style="width:100px;" /></a>
+      </div>
+
+      <div class="col-12 col-md-10 d-none d-xl-block">
+        <nav class="site-navigation position-relative text-right" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+            <li><a href="/" class="nav-link" data-target="#home-section">Home</a></li>
+            <li class="has-children">
+              <a href="/" class="nav-link" data-target="#about-section">About Us</a>
+              <ul class="dropdown">
+                <li><a href="/" class="nav-link" data-target="#team-section">Team</a></li>
+                <li><a href="/" class="nav-link" data-target="#pricing-section">Pricing</a></li>
+                <li><a href="/" class="nav-link" data-target="#faq-section">FAQ</a></li>
+                <li class="has-children">
+                  <a href="#">More Links</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Menu One</a></li>
+                    <li><a href="#">Menu Two</a></li>
+                    <li><a href="#">Menu Three</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/" class="nav-link" data-target="#portfolio-section">Portfolio</a></li>
+            <li><a href="/" class="nav-link" data-target="#services-section">Services</a></li>
+            <li><a href="/" class="nav-link" data-target="#testimonials-section">Testimonials</a></li>
+            <li><a href="/" class="nav-link" data-target="#blog-section">Blog</a></li>
+            <li><a href="/" class="nav-link" data-target="#contact-section">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-6 d-inline-block d-xl-none ml-md-0 py-1" style="position: relative; top: 3px;">
+        <a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scroll to sections when clicking navbar links
+    const links = document.querySelectorAll('.nav-link');
+
+    links.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor click behavior
+        const targetId = this.getAttribute('data-target');
+        const mainUrl = window.location.origin; // Get the main URL
+
+        // Update the URL with the hash
+        window.location.href = `${mainUrl}${targetId}`;
+      });
+    });
+
+    // Check if there's a hash in the URL on load
+    if (window.location.hash) {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      }
+    }
+  });
+</script>
