@@ -1,0 +1,18 @@
+[2024-10-11 18:12:07 +0000] [43309] [INFO] Starting gunicorn 23.0.0
+[2024-10-11 18:12:07 +0000] [43309] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-10-11 18:12:07 +0000] [43309] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-10-11 18:12:08 +0000] [43309] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-10-11 18:12:08 +0000] [43309] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-10-11 18:12:09 +0000] [43309] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-10-11 18:12:09 +0000] [43309] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-10-11 18:12:10 +0000] [43309] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-10-11 18:12:10 +0000] [43309] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-10-11 18:12:11 +0000] [43309] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-10-11 18:12:11 +0000] [43309] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-10-11 18:12:12 +0000] [43309] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-10-11 18:14:11 +0000] [43443] [INFO] Starting gunicorn 23.0.0
+[2024-10-11 18:14:11 +0000] [43443] [INFO] Listening at: http://127.0.0.1:8000 (43443)
+[2024-10-11 18:14:11 +0000] [43443] [INFO] Using worker: sync
+[2024-10-11 18:14:11 +0000] [43444] [INFO] Booting worker with pid: 43444
+[2024-10-11 18:14:11 +0000] [43445] [INFO] Booting worker with pid: 43445
+[2024-10-11 18:14:11 +0000] [43446] [INFO] Booting worker with pid: 43446

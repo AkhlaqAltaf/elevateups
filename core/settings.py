@@ -29,7 +29,7 @@ SECRET_KEY = 'd&f9dg7c8uew4eh*u7k&7fou-rng&=vst&(-rkr5p5l+*cenk+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["www.escalators.tech",'escalators.tech',"ec2-13-60-193-81.eu-north-1.compute.amazonaws.com","*"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
