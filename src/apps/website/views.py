@@ -1,3 +1,4 @@
+from django.contrib.sitemaps import Sitemap
 from django.shortcuts import get_object_or_404
 from django.views.generic import TemplateView, DetailView, ListView
 
@@ -30,3 +31,15 @@ class MoreBlogsView(ListView):
     template_name = 'blog/moreblogs.html'
     context_object_name = 'blogs'
     paginate_by = 10
+
+
+
+class SiteMap(Sitemap):
+    changefreq = "weekly"
+    priority = 0.5
+
+    def items(self):
+        return Blogs.objects.all()  # Customize this to your needs
+
+    def location(self, item):
+        return f'/{item.id}/'  # Customize this URL path
