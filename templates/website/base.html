@@ -1,10 +1,36 @@
-<!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+
+{% include 'website/head.html' %}
+    <title>Escalators &mdash;{%block title%}Smart Software Solutions Company{%endblock%}</title>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+  </div>
+      {% include 'website/navbar.html' %}
+      {%block content%}
+      {%endblock content%}
+    {% include 'website/footer.html' %}
+  {% include 'website/scripts.html' %}
 
 </body>
 </html>

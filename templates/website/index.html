@@ -1,90 +1,21 @@
+{%extends 'website/base.html'%}
+
 {% load static %}
 
-<html lang="en">
+{%block content%}
 
-{% include 'website/head.html' %}
-
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-  <div id="overlayer"></div>
-  <div class="loader">
-    <div class="spinner-border text-primary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div>
-
-  <div class="site-wrap">
-
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-    {% include 'website/navbar.html' %}
 
     <!-- Hero Section -->
-    <div class="site-blocks-cover overlay" style="background-image: url({% static "images/hero_2.jpg" %});" data-aos="fade" id="home-section">
-      <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-md-8 mt-lg-5 text-center">
-            <h1 class="text-uppercase" data-aos="fade-up">Welcome to Escalators</h1>
-            <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">
-              Pioneering AI Solutions for Tomorrow's Challenges. Empowering businesses through cutting-edge artificial intelligence.
-            </p>
-            <div data-aos="fade-up" data-aos-delay="100">
-              <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Get In Touch</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a href="#about-section" class="mouse smoothscroll">
-        <span class="mouse-icon">
-          <span class="mouse-wheel"></span>
-        </span>
-      </a>
-    </div>
+{%include 'website/hero_section.html'%}
 
     <!-- About Us Section -->
-    <div class="site-section cta-big-image" id="about-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center" data-aos="fade">
-            <h2 class="section-title mb-3">About Escalators</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 mb-5" data-aos="fade-up">
-            <figure class="circle-bg">
-              <img src="{% static 'images/hero_1.jpg' %}" alt="About Us Image" class="img-fluid">
-            </figure>
-          </div>
-          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-            <div class="mb-4">
-              <h3 class="h3 mb-4 text-black">Shaping the Future of AI</h3>
-              <p>
-                At Escalators, we harness the power of artificial intelligence to drive business growth and innovation. Our solutions are designed to meet the unique needs of modern businesses, from predictive analytics to intelligent automation.
-              </p>
-            </div>
+    {%include 'website/about_us.html'%}
 
-            <div class="mb-4">
-              <ul class="list-unstyled ul-check success">
-                <li>Customized AI solutions for every business</li>
-                <li>Expertise in machine learning and automation</li>
-                <li>Data-driven innovation</li>
-                <li>Comprehensive support and consultation</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Additional Sections (replace with your content) -->
+<!--  SITE SECTION FOR MOTIVATING-->
     {% include 'website/site_section.html' %}
+<!--  TEAM DISPLAYING SECTION   -->
     {% include 'website/team.html' %}
+<!--  PORTFOLIO SECTION -->
     {% include 'website/portfolio.html' %}
     {% include 'website/service.html' %}
     {% include 'website/testimonials.html' %}
@@ -92,11 +23,8 @@
     {% include 'website/about.html' %}
     {% include 'website/blog.html' %}
     {% include 'website/contact_us.html' %}
-    {% include 'website/footer.html' %}
 
-  </div> <!-- .site-wrap -->
 
-  {% include 'website/scripts.html' %}
-  
-</body>
-</html>
+
+
+{%endblock content%}
