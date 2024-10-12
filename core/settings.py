@@ -136,14 +136,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/var/www/elevateups_static/static/'
 STATICFILES_DIRS = [
-               os.path.join(BASE_DIR,'static')
+               os.path.join(BASE_DIR,'static'),
+                '/var/www/elevateups_static/static'
 ] 
 
 # MEDIA
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_ROOT =  '/var/www/elevateups_media/media/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 
@@ -164,9 +167,5 @@ EMAIL_USE_TLS = True
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-STATIC_URL = 'static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 
