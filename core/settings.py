@@ -139,7 +139,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/var/www/elevateups_static/static/'
 STATICFILES_DIRS = [
                os.path.join(BASE_DIR,'static'),
-                '/var/www/elevateups_static/static'
 ] 
 
 # MEDIA
