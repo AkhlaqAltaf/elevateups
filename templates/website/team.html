@@ -42,6 +42,36 @@
   </div>
 </section>
 
+<style>
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-img {
+    width: 100%;
+    max-width: 220px; /* Set a max-width for larger screens */
+    height: 220px; /* Fixed height to ensure consistency */
+    object-fit: cover;
+    border-radius: 5%; /* Adjust the rounding as needed */
+    margin: 0 auto; /* Center the image */
+    display: block;
+    aspect-ratio: 1 / 1; /* Ensures the image is square */
+}
+
+@media (max-width: 576px) {
+    .team-img {
+        max-width: 150px; /* Decrease size for mobile */
+        height: 150px;
+    }
+}
+
+</style>
   <script>
   var swiper = new Swiper('.swiper-container', {
     loop: true,
