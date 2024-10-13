@@ -19,9 +19,31 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
+  document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scroll to sections when clicking navbar links
+    const links = document.querySelectorAll('.nav-link');
 
- gtag('config', 'UA-23581568-13');
+    links.forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor click behavior
+        const targetId = this.getAttribute('data-target');
+        const mainUrl = window.location.origin; // Get the main URL
+
+        // Update the URL with the hash
+        window.location.href = `${mainUrl}${targetId}`;
+      });
+    });
+
+    // Check if there's a hash in the URL on load
+    if (window.location.hash) {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      }
+    }
+  });
 </script>

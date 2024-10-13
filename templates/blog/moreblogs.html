@@ -1,7 +1,7 @@
 {%extends 'website/base.html'%}
 
 {% load static %}
-{%block title%}Blogs {%endblock title%}
+<!--{%block title%}Blogs {%endblock title%}-->
 
 {%block content%}
 <section class="site-section" id="more-blogs-section">
@@ -28,6 +28,7 @@
     </div>
   </div>
 </section>
+  {% include 'website/scripts.html' %}
 
 <style>
   .blog-image {
