@@ -16,6 +16,8 @@
 
   <div class="site-wrap">
 
+
+
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -26,10 +28,12 @@
     </div>
 
   </div>
-      {% include 'website/navbar.html' %}
-      {%block content%}
-      {%endblock content%}
-    {% include 'website/footer.html' %}
+
+  {% include 'website/navbar.html' %}
+  {%block content%}
+  {%endblock content%}
+
+  {% include 'website/footer.html' %}
   {% include 'website/scripts.html' %}
 
 </body>
