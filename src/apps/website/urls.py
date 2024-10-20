@@ -5,7 +5,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 
 from core import settings
-from src.apps.website.views import WebsiteView, BlogDetailView, MoreBlogsView, SiteMap
+from src.apps.website.views import WebsiteView, BlogDetailView, MoreBlogsView, SiteMap, contact_us_view
 
 app_name = "website"
 
@@ -14,7 +14,7 @@ urlpatterns = [
     path('blog/<int:id>/', BlogDetailView.as_view(), name='blog_detail'),
     path('more-blogs/', MoreBlogsView.as_view(), name='more_blogs'),
     path('sitemap.xml', TemplateView.as_view(template_name='sitemap.xml', content_type='application/xml')),
-
+    path('contact/', contact_us_view, name='contact_us'),
 
 ]
 if settings.DEBUG:
